@@ -1,0 +1,46 @@
+<html lang = "en">
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <title>Book it Forward</title>
+        <script src="javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+
+        <div id="mySidenav" class = "sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="request.html">Request a Reading</a>
+            <a href="donate.html">Donate a Book</a>
+            <a href="resources.html">More Resources</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        
+        <script>
+            function openNav(){
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            function closeNav(){
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+
+        <h1>More Resources</h1>
+        <p>If you didn't find the book you were looking for or it's unavailable, try the following resources: </p>
+        <ul>
+            <li><a href="https://tischlibrary.tufts.edu/what-we-have/borrow-and-request/find-textbooks-course-reserves">Reserve</a></li>
+            <li><a href="https://tischlibrary.tufts.edu/what-we-have/borrow-and-request/interlibrary-loan-illiad">ILLiad</a></li>
+            <li><a href="https://www.abebooks.com/">AbeBooks</a></li>
+            <li><a href="https://tischlibrary.tufts.edu/what-we-have/borrow-and-request/interlibrary-loan-illiad">ILLiad</a></li>
+            <li><a href="https://www.chegg.com/promo/sohp">Chegg</a></li>
+            <li><a href="https://www.slugbooks.com/">SlugBooks</a></li>
+            <li><a href="https://www.ecampus.com/">eCampus</a></li>
+            <li><a href="https://www.ebooks.com/en-us/">eBooks</a></li>
+            <li><a href="https://tufts.bncollege.com/?displayPageId=Home&leftNavRequired=false">Tufts Bookstore price checking policy</a></li>
+        </ul>
+
+    </body>
+</html>

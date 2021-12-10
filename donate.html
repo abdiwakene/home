@@ -1,0 +1,40 @@
+<html lang = "en">
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <title>Book it Forward</title>
+        <script src="javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+
+        <div id="mySidenav" class = "sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="request.html">Request a Reading</a>
+            <a href="donate.html">Donate a Book</a>
+            <a href="resources.html">More Resources</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        
+        <script>
+            function openNav(){
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            function closeNav(){
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+
+        <h1>Donate a Book</h1>
+        <p style="text-align: center;">The Lending Library through FIRST accepts books at any time!</p>
+        <h2>Drop off at any of the following locations:</h2>
+        <ul>
+            <li>The office of 20 Professors Row</li>
+            <li>Trough the bookstore at the end of the semester</li>
+            <li>Boxes in select residential halls on campus at the end of the year</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,127 @@
+<html lang = "en">
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <title>Book it Forward</title>
+        <script src="javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <div id="mySidenav" class = "sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="request.html">Request a Reading</a>
+            <a href="donate.html">Donate a Book</a>
+            <a href="resources.html">More Resources</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        
+        <script>
+            function openNav(){
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            function closeNav(){
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+
+        <div class ="content">
+            <h1>Book it Forward: Lending Library</h1>
+            <h2>Who runs this?</h2>
+            <p>The FIRST Resource Center serves and creates a community of support to develop a network of resources for Tufts' first generation, low-income, and undocumented populations. </p>
+            <h2>What is it?</h2>
+            <p>One of these resources is the Book it Forward Lending Library where students can donate and access Tufts course required readings.</p>
+            <h2>Who qualifies?</h2>
+            <p>Students receiving financial aid with a Family Contribution of $10,000 and below may access books.</p>
+        </div>
+
+        <div>
+            <button type="button" id="formButton">Tufts Readings</button>
+
+            <form id="form1">
+            <b>First Name:</b> <input type="text" name="firstName">
+            <br><br>
+            <b>Last Name: </b><input type="text" name="lastName">
+            <br><br>
+            <b>Student ID Number: </b><input type="text" name="idNum">
+            <br><br>
+            <b>Tufts Email Address: </b><input type="email" name="email">
+            <!-- <input type="radio" name="age" value="adolescent"> 0 - 19 years
+            <br>
+            <input type="radio" name="age" value="mid"> 20 - 59 years
+            <br>
+            <input type="radio" name="age" value="senior"> 60 + years -->
+            <br> <br>
+            <!-- include database in drop down menu -->
+            <b>Books:</b>
+            <select name="color">
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="yellow">Yellow</option>
+                <option value="red">Red</option>
+                <option value="pink">Pink</option>
+            </select>
+            <br><br>
+            <b>Comment:</b>
+            <br>
+            <textarea name="comment">
+                Enter your comment here
+            </textarea>
+            <br><br>
+            <button type="button" id="submit">Submit</button>
+            </form>
+
+            <button type="button" id="formButton2">Leisure</button>
+            <form id="form2">
+                <b>First Name:</b> <input type="text" name="firstName">
+                <br><br>
+                <b>Last Name: </b><input type="text" name="lastName">
+                <br><br>
+                <b>Student ID Number: </b><input type="text" name="idNum">
+                <br><br>
+                <b>Tufts Email Address: </b><input type="email" name="email">
+                <br>
+                <!-- <input type="radio" name="age" value="adolescent"> 0 - 19 years
+                <br>
+                <input type="radio" name="age" value="mid"> 20 - 59 years
+                <br>
+                <input type="radio" name="age" value="senior"> 60 + years
+                <br> <br> -->
+
+                <!-- include database in drop down menu -->
+                <b>Books:</b>
+                <select name="color">
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="red">Red</option>
+                    <option value="pink">Pink</option>
+                </select>
+                <br><br>
+                <b>Comment:</b>
+                <br>
+                <textarea name="comment">
+                    Enter your comment here
+                </textarea>
+                <br><br>
+                <button type="button" id="submit">Submit</button>
+                </form>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+                $("#formButton").click(function() {
+                    $("#form1").toggle();
+                });
+                });
+            
+            $(document).ready(function() {
+                $("#formButton2").click(function() {
+                    $("#form2").toggle();
+                });
+                });
+        </script>
+    </body>
+</html>

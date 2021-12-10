@@ -1,0 +1,97 @@
+<html lang = "en">
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <title>Book it Forward</title>
+        <script src="javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+
+        <div id="mySidenav" class = "sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="request.html">Request a Reading</a>
+            <a href="donate.html">Donate a Book</a>
+            <a href="resources.html">More Resources</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        
+        <script>
+            function openNav(){
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            function closeNav(){
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+
+        <h1>Contact Us</h1>
+        <div class="container">
+            <script language="javascript">
+    
+                function checkFname() {
+                    firstName = document.getElementsByName('fname')[0].value;
+                    if (firstName == "") {
+                        document.getElementById("fIssue").innerHTML = "<span style=\"color:red\">" + "* Please input your first name" + "</span>";
+                        return false;
+                    }
+                    return true;
+                }
+    
+                function checkLname() {
+                    lastName = document.getElementsByName('lname')[0].value;
+                    if (lastName == "") {
+                        document.getElementById("lnIssue").innerHTML = "<span style=\"color:red\">" + "* Please input your last name" + "</span>";
+                        return false;
+                    }
+                    return true;
+                }
+    
+                function checkEmail() {
+                    emailAd = document.getElementsByName('email')[0].value;
+                    if (emailAd == "") {
+                        document.getElementById("eIssue").innerHTML = "<span style=\"color:red\">" + "* Please input your email" + "</span>";
+                        return false;
+                    }
+                    return true;
+                }
+    
+                function checkMessage() {
+                    pMessage = document.getElementsByName('message')[0].value;
+                    if (pMessage== "") {
+                        document.getElementById("mIssue").innerHTML = "<span style=\"color:red\">" + "* Please input your message" + "</span>";
+                        return false;
+                    }
+                    return true;
+                }
+    
+                function confirm(){
+                    validFname = checkFname();
+                    validLname = checkLname();
+                    validEmail = checkEmail();
+                    validMessage = checkMessage();
+                    if(validFname == true && validLname == true && validEmail == true && validMessage == true){
+                        return true;
+                    }
+                    else{
+                        return false;
+                    }
+                }
+    
+            </script>
+            
+            <form onsubmit ="return confirm()" >
+                <p>First Name*: <input type="text"  name='fname' /><span id="fIssue" style="padding-left: 1em;"></span></p>
+                <p>Last Name*:  <input type="text"  name='lname' /><span id="lnIssue" style="padding-left: 1em;"></span></p>
+                <p>Email*: <input type="text"  name='email' /><span id="eIssue" style="padding-left: 1em;"></span></p>
+                <p>Message*: <input type="text" name='message'/><span id="mIssue" style="padding-left: 1em;"></span></p>
+                <p><input type = "submit" value = "Submit"></p>
+            </form>
+    
+            
+        </div>
+    </body>
+</html>
