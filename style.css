@@ -1,5 +1,6 @@
 html{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    background-color: #ADD8E6;
 }
 h1{
     font-size: 40px;
@@ -33,7 +34,22 @@ select {
     width: 50%;
 }
 button{
-    margin: 0 50%;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    background-color: white;
+    color: black;
+    border: 3px solid #ffdb58;
+    font-size: 16px;
+    text-align:center;
+    margin: 4px 2px;
+    padding: 10px 32px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    opacity: 0.7;
+}
+button:hover{
+    background-color: #ffdb58;
+    color:black;
 }
 .sidenav {
     height: 100%;
@@ -93,3 +109,8 @@ form {
     text-align:center;
     align-items: center;
 }
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
