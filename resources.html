@@ -7,9 +7,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
+    <style>
+        .column, .column2, .column3{
+            text-align: center;
+            background-color: #f9f9f9; 
+            opacity: .9; 
+            border-radius: 20px; 
+            padding:20px;
+            margin: 5px;
+            width: 220px;
+            height: 300px;
+        }
+    </style>
+
     <body>
 
         <div id="mySidenav" class = "sidenav">
+            <a href="index.html">
+                <img src="logo.png" style="width: auto; height:100px; position:absolute;top: 10px; left:21px;">
+            </a>
+            <br><br>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="request.html">Request a Reading</a>
             <a href="donate.html">Donate a Book</a>
@@ -17,7 +34,7 @@
             <a href="contact.html">Contact Us</a>
         </div>
 
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
         
         <script>
             function openNav(){
@@ -28,19 +45,91 @@
             }
         </script>
 
-        <h1>More Resources</h1>
-        <p>If you didn't find the book you were looking for or it's unavailable, try the following resources: </p>
-        <ul>
-            <li><a href="https://tischlibrary.tufts.edu/what-we-have/borrow-and-request/find-textbooks-course-reserves">Reserve</a></li>
-            <li><a href="https://tischlibrary.tufts.edu/what-we-have/borrow-and-request/interlibrary-loan-illiad">ILLiad</a></li>
-            <li><a href="https://www.abebooks.com/">AbeBooks</a></li>
-            <li><a href="https://tischlibrary.tufts.edu/what-we-have/borrow-and-request/interlibrary-loan-illiad">ILLiad</a></li>
-            <li><a href="https://www.chegg.com/promo/sohp">Chegg</a></li>
-            <li><a href="https://www.slugbooks.com/">SlugBooks</a></li>
-            <li><a href="https://www.ecampus.com/">eCampus</a></li>
-            <li><a href="https://www.ebooks.com/en-us/">eBooks</a></li>
-            <li><a href="https://tufts.bncollege.com/?displayPageId=Home&leftNavRequired=false">Tufts Bookstore price checking policy</a></li>
-        </ul>
+        <h1 style="font-size: 50px; background-color: #f9f9f9; opacity: .7; border-radius: 20px; padding:25px;"><strong>
+            More Resources</strong></h1>
+        <p style="text-align: center; font-size: 20px;">If you didn't find the book you were looking for or it's unavailable, try the following resources: </p>
 
+        <div class="row">
+            <div class="column" style="float: left;width:29.6%">
+                <a href="https://tischlibrary.tufts.edu/what-we-have/borrow-and-request/find-textbooks-course-reserves" target="_blank">
+                    <img src = "reserve.jpeg" style="width:auto; height:200px">
+                </a>
+                <p><strong>Tufts Reserve </strong>allows professors or faculty to request the library to put aside a textbook or physical item behind the main desk,
+                    where students can check them out to use for short periods of time.</p>
+                </p>
+            </div>
+            <div class="column" style="float: left;width:29.6%">
+                <a href="https://tischlibrary.tufts.edu/what-we-have/borrow-and-request/interlibrary-loan-illiad" target="_blank">
+                    <img src="illiad.png" style="width:auto; height: 200px">
+                </a>
+                <p><strong>Tufts Interlibrary Loan</strong> enables Tufts students, professors, and staff to borrow books, CDs, DVDs, microfilm, 
+                    and other materials from libraries worldwide.
+                </p>
+                </p>
+            </div>
+            <div class="column" style="float: left;width:29.6%">
+                <a href="https://www.abebooks.com/" target="_blank">
+                    <img src="abebooks.png" style="width:auto; height:200px;">
+                </a>
+                <p><strong>Abebooks</strong> is an e-commerce global online marketplace that offer books, fine art, and collectables from sellers in over 50 countries.
+                </p>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <br><br>
+        <div class="row">
+            <div class="column2" style="float: left; width:29.6%">
+                <a href="https://www.chegg.com/promo/sohp" target="_blank">
+                    <img src="chegg.png" style="width:auto; height: 100px">
+                </a>
+                <p><strong>Chegg</strong> provides digital and physical textbook rentals, textbooks, online tutoring, and other student services.
+                </p>
+            </div>
+            <div class="column2" style="float: left; width:29.6%">
+                <a href="https://www.slugbooks.com/" target="_blank">
+                <img src="slugbooks.gif" style="width:auto; height: 200px">
+            </a>
+            <p><strong>Slug Books</strong> is the easiest way to compare textbook prices so that you can buy or rent books cheap.
+            </p>
+            </div>
+            <div class="column2" style="float: left; width:29.6%">
+                <a href="https://www.ecampus.com/" target="_blank">
+                <img src="ecampus.png" style="width:auto; height:200px">
+            </a>
+            <p><strong>ECampus</strong> online retailer of new, used and electronic textbooks for sale or rent, study materials and book buyback services.
+            </p>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="column3" style="float: left; width:46.3%; height: 200px;">
+                <a href="https://www.ebooks.com/en-us/" target="_blank">
+                    <img src="ebooks.png" style="width:auto; height:100px">
+                </a>
+                <p><strong>eBooks</strong> sells ebooks direct to consumers around the world that can be accessed online or downloaded to a vast array of devices.
+                </p>
+            </div>
+            <div class="column3" style="float: left; width:46.3%; height:200px">
+                <a href="https://tufts.bncollege.com/?displayPageId=Home&leftNavRequired=false" target="_blank">
+                    <img src="tufts.png" style="width:auto; height:100px">
+                </a>
+                <p><strong>Tufts Bookstore</strong> price matches if students find better prices on different websites to avoid all the extra fees.
+                </p>
+            </div>
+        </div>
     </body>
 </html>
