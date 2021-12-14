@@ -10,6 +10,10 @@
     <body>
 
         <div id="mySidenav" class = "sidenav">
+            <a href="index.html">
+                <img src="logo.png" style="width: auto; height:100px; position:absolute;top: 10px; left:21px;">
+            </a>
+            <br><br>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="request.html">Request a Reading</a>
             <a href="donate.html">Donate a Book</a>
@@ -17,7 +21,7 @@
             <a href="contact.html">Contact Us</a>
         </div>
 
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
         
         <script>
             function openNav(){
@@ -28,11 +32,11 @@
             }
         </script>
 
-        <h1>Request a Book</h1>
+        <h1 style="font-size: 50px; background-color: #f9f9f9; opacity: .7; border-radius: 20px; padding:25px;"><strong>
+            Request a Book</strong></h1>
 
         <div>
             <button type="button" id="formButton">Tufts Readings</button>
-
             <form id="form1">
             <b>First Name:</b> <input type="text" name="firstName">
             <br><br>
@@ -66,7 +70,7 @@
             <button type="button" id="submit">Submit</button>
             </form>
 
-            <button type="button" id="formButton2">Leisure</button>
+            <button type="button" id="formButton2" style="text-align: center;">Leisure</button>
             <form id="form2">
                 <b>First Name:</b> <input type="text" name="firstName">
                 <br><br>
@@ -116,8 +120,5 @@
                 });
                 });
         </script>
-
-
-
     </body>
 </html>
