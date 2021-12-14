@@ -86,11 +86,15 @@ button:hover{
     margin-left: 50px;
   }
   
-  @media screen and (max-height: 450px) {
+@media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-    .column, .column2, .column3 {width:100%;}
   }
+
+@media screen and (max-width: 600px) {
+    .column, .column2, .column3 {width: 100%;}
+  }
+
 form {
     padding: 15px;
     border: 1px solid #666;
