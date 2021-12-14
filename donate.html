@@ -7,9 +7,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
-    <body>
+    <style>
+        .column1, .column2{
+            text-align: center;
+            padding:20px;
+            margin: 5px;
+            width: 220px;
+            height: 300px;
+        }
+        p{
+            text-align: center;
+            font-size:20px;
+            margin:5px;
+        }
+    </style>
 
+    <body>
         <div id="mySidenav" class = "sidenav">
+            <a href="index.html">
+                <img src="logo.png" style="width: auto; height:100px; position:absolute;top: 10px; left:21px;">
+            </a>
+            <br><br>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="request.html">Request a Reading</a>
             <a href="donate.html">Donate a Book</a>
@@ -17,7 +35,7 @@
             <a href="contact.html">Contact Us</a>
         </div>
 
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
         
         <script>
             function openNav(){
@@ -28,13 +46,20 @@
             }
         </script>
 
-        <h1>Donate a Book</h1>
-        <p style="text-align: center;">The Lending Library through FIRST accepts books at any time!</p>
-        <h2>Drop off at any of the following locations:</h2>
-        <ul>
-            <li>The office of 20 Professors Row</li>
-            <li>Trough the bookstore at the end of the semester</li>
-            <li>Boxes in select residential halls on campus at the end of the year</li>
-        </ul>
+        <h1 style="font-size: 50px; background-color: #f9f9f9; opacity: .7; border-radius: 20px; padding:25px;"><strong>
+            Donate a Book</strong></h1>
+        <p>The Lending Library through FIRST accepts books at any time! If your books need a new home, drop
+        them off at any of the following locations:</p>
+
+        <div class="row">
+            <div class="column1" style="float:left; width: 46.3%;">
+                <img src="Screen Shot 2021-12-13 at 4.41.35 PM.png" style="width: auto; height: 400px">
+            <p>The office of 20 Professors Row or the Tufts Bookstore at the end of the semester.</p>
+            </div>
+            <div class="column2" style="float:left; width:46.3%">
+                <img src="boxes.png" style="width:auto; height:400px;">
+                <p>Boxes in select residential halls on campus at the end of the year</p>
+            </div>
+        </div>
     </body>
 </html>
