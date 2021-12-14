@@ -8,8 +8,11 @@
     </head>
 
     <body>
-
         <div id="mySidenav" class = "sidenav">
+            <a href="index.html">
+                <img src="logo.png" style="width: auto; height:100px; position:absolute;top: 10px; left:21px;">
+            </a>
+            <br><br>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="request.html">Request a Reading</a>
             <a href="donate.html">Donate a Book</a>
@@ -17,7 +20,7 @@
             <a href="contact.html">Contact Us</a>
         </div>
 
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
         
         <script>
             function openNav(){
@@ -28,10 +31,10 @@
             }
         </script>
 
-        <h1>Contact Us</h1>
+        <h1 style="font-size: 50px; background-color: #f9f9f9; opacity: .7; border-radius: 20px; padding:25px;"><strong>
+            Contact Us</strong></h1>
         <div class="container">
             <script language="javascript">
-    
                 function checkFname() {
                     firstName = document.getElementsByName('fname')[0].value;
                     if (firstName == "") {
@@ -80,18 +83,15 @@
                         return false;
                     }
                 }
-    
             </script>
             
-            <form onsubmit ="return confirm()" >
+            <form onsubmit ="return confirm()">
                 <p>First Name*: <input type="text"  name='fname' /><span id="fIssue" style="padding-left: 1em;"></span></p>
                 <p>Last Name*:  <input type="text"  name='lname' /><span id="lnIssue" style="padding-left: 1em;"></span></p>
                 <p>Email*: <input type="text"  name='email' /><span id="eIssue" style="padding-left: 1em;"></span></p>
-                <p>Message*: <input type="text" name='message'/><span id="mIssue" style="padding-left: 1em;"></span></p>
+                <p>Message*: <input type="text" name='message' size="60"/><span id="mIssue" style="padding-left: 1em;"></span></p>
                 <p><input type = "submit" value = "Submit"></p>
             </form>
-    
-            
         </div>
     </body>
 </html>
