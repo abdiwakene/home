@@ -37,7 +37,9 @@
 
         <div>
             <button type="button" id="formButton">Tufts Reading</button>
-            <form id="form1">
+            <form id="form1" method = "GET" action = "http://localhost:8080/request">
+              <!-- action: URL. Try localhost:8080 or process. -->
+              <!-- method POST or GET -->
             <b>First Name:</b> <input type="text" name="firstName">
             <br><br>
             <b>Last Name: </b><input type="text" name="lastName">
@@ -88,6 +90,48 @@
                     $("#form2").toggle();
                 });
                 });
+
+                // // must be done on a different URL,
+                // // should be under node.js
+                //
+                // const {MongoClient} = require('mongodb');
+                // const express = require("express"); // the library we will use to handle requests
+                // const port = process.env.port || 8080; // port to listen on
+                // const app = express();
+                //
+                // // Main function that executes CRUD
+                // async function main() {
+                // 	const uri = "mongodb+srv://magyen:3xjxNziv@cluster0.j0gko.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+                //
+                //   const client = new MongoClient(uri);
+                //
+                //   try {
+                //       await client.connect();
+                //       // await listDatabases(client);
+                //       // await findOneListingByName(client, "Physics")
+                //       await updateListingbyStatus(client, $("#textbook").val(), {taken: true})
+                //
+                //   } catch (e) {
+                //     console.error(e);
+                //   } finally {
+                //     await client.close();
+                //   }
+                //
+                // }
+                //
+                // async function updateListingbyStatus(client, nameOfListing, updated_status){
+                //   const result = await client.db("CS20Final").collection("books").updateOne({ name : nameOfListing} , {$set: updated_status});
+                //
+                //   if(result){
+                //     console.log("worked")
+                //     console.log(result);
+                //   } else {
+                //     console.log("not found");
+                //   }
+                // }
+                //
+                // main().catch(console.error);
+
         </script>
     </body>
 </html>
