@@ -41,12 +41,12 @@ mongodb.MongoClient.connect(uri, (err, db) => {
       } else {
         // if all works
         var results = "";
+        results += "Request" + "\n\n" + "Name: " + qobj.firstName + " " + qobj.lastName + "\n" + "Student ID: " + qobj.idNum + "\n" + "Student Email: " + qobj.email + "\n\n"; 
         await docs.forEach(function(item){
             if (item.available === "Yes"){
-                results += "Request" + "\n\n" + "Name: " + qobj.firstName + " " + qobj.lastName + "\n" + "Student ID: " + qobj.idNum + "\n" + "Student Email: " + qobj.email + "\n\n"; 
                 results += "Book Title: " + item.name + "\n" + "Book Topic: " + item.topic + "\n" + "Book ISBN: " + item.isbn + "\n\n" + "This textbook is available. Please stop by the FIRST Center when ready for pick up. Thank you." + "\n";
             } else {
-                results += "Book Title: " + item.name + "\n" + "Book Topic: " + item.topic + "\n" + "Book ISBN: " + item.isbn + "\n\n" + "Unfortunatly, this textbook is not available at the moment.\nPlease check again at another time, or stop by the FIRST Center to place a hold for when next copy is available. Thank you." + "\n";
+                results += "Book Title: " + item.name + "\n" + "Book Topic: " + item.topic + "\n" + "Book ISBN: " + item.isbn + "\n\n" + "Unfortunatly, this textbook is not available at the moment.\nPlease check again at another time, or stop by the FIRST Center to place a hold for when next copy is available. Thank you." + "\n\n";
             }
         });
         if (docs.length === 0) {
