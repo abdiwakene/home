@@ -36,49 +36,61 @@
             Request a Book</strong></h1>
 
         <div>
-            <button type="button" id="formButton">Tufts Reading</button>
+            <button type="button" id="formButton">Textbook Requests</button>
             <form id="form1" method = "GET" action = "http://localhost:8080/request">
-              <!-- action: URL. Try localhost:8080 or process. -->
-              <!-- method POST or GET -->
-            <b>First Name:</b> <input type="text" name="firstName">
-            <br><br>
-            <b>Last Name: </b><input type="text" name="lastName">
-            <br><br>
-            <b>Student ID Number: </b><input type="text" name="idNum">
-            <br><br>
-            <b>Tufts Email Address: </b><input type="email" name="email">
-            <!-- <input type="radio" name="age" value="adolescent"> 0 - 19 years
-            <br>
-            <input type="radio" name="age" value="mid"> 20 - 59 years
-            <br>
-            <input type="radio" name="age" value="senior"> 60 + years -->
-            <br> <br>
-            <!-- include database in drop down menu -->
-            <b>Books:</b>
-            <select id = "textbook">
-                <option value="chem">Chemistry the Central Science</option>
-                <option value="calc">Calculus Early Transcendentals</option>
-                <option value="psych">Psychological Science</option>
-                <option value="econ">Economics</option>
-                <option value="write">The Writer's Presence</option>
-                <option value="phys">Physics</option>
-                <option value="stat">Elementary Statistics</option>
-                <option value="fin">Financial Accounting</option>
-                <option value="hist">A History of Byzantium</option>
-                <option value="plato">The Republic of Plato</option>
-            </select>
-            <br><br>
-            <b>Comment:</b>
-            <br>
-            <textarea name="comment">
-                Enter your comment here
-            </textarea>
-            <br><br>
-            <button type="button" id="submit">Submit</button>
+                <h2>Search for Textbooks</h2>
+                <b>First Name:</b> <input type="text" name="firstName" required>
+                <br><br>
+                <b>Last Name: </b><input type="text" name="lastName" required>
+                <br><br>
+                <b>Student ID Number: </b><input type="text" name="idNum" required>
+                <br><br>
+                <b>Tufts Email Address: </b><input type="email" name="email" required>
+                <br><br>
+                <p><label> Search by Title: </label><input type="text" name="name" style="margin-left: 1rem;"></p>
+                <p><label name> Search by Topic: </label><input type="text" name="topic" style="margin-left: 1rem;"></p>
+                <p><label name> Search by ISBN: </label><input type="text" name="isbn" style="margin-left: 1rem;"></p>
+                <br><br>
+                <input type="radio" name="btn" value="name" checked="checked"> Title <br />
+                <input type="radio" name="btn" value="topic"> Topic <br />
+                <input type="radio" name="btn" value="isbn"> ISBN <br />
+                <!-- <input type="submit" value="Submit"> -->
+            
+            <button type="submit" value="Submit">Submit</button>
             </form>
         </div>
 
         <script>
+            $(document).ready(function() {
+                document.getElementsByTagName("p")[0].style.display = "inline";
+                document.getElementsByTagName("p")[1].style.display = "none";
+                document.getElementsByTagName("p")[2].style.display = "none";
+
+            });
+
+            var radios = document.getElementsByName("btn");
+            
+            $("input[name='btn'").change(function() {
+                if (radios[0].checked){
+                    // show company name input box
+                    document.getElementsByTagName("p")[0].style.display = "inline";
+                    document.getElementsByTagName("p")[1].style.display = "none";
+                    document.getElementsByTagName("p")[2].style.display = "none";
+
+                } else if (radios[1].checked) {
+                    // show stock ticker
+                    document.getElementsByTagName("p")[0].style.display = "none";
+                    document.getElementsByTagName("p")[1].style.display = "inline";
+                    document.getElementsByTagName("p")[2].style.display = "none";
+
+                } else {
+                    // show stock ticker
+                    document.getElementsByTagName("p")[0].style.display = "none";
+                    document.getElementsByTagName("p")[1].style.display = "none";
+                    document.getElementsByTagName("p")[2].style.display = "inline";
+
+                }
+            });
             $(document).ready(function() {
                 $("#formButton").click(function() {
                     $("#form1").toggle();
@@ -90,48 +102,6 @@
                     $("#form2").toggle();
                 });
                 });
-
-                // // must be done on a different URL,
-                // // should be under node.js
-                //
-                // const {MongoClient} = require('mongodb');
-                // const express = require("express"); // the library we will use to handle requests
-                // const port = process.env.port || 8080; // port to listen on
-                // const app = express();
-                //
-                // // Main function that executes CRUD
-                // async function main() {
-                // 	const uri = "mongodb+srv://magyen:3xjxNziv@cluster0.j0gko.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-                //
-                //   const client = new MongoClient(uri);
-                //
-                //   try {
-                //       await client.connect();
-                //       // await listDatabases(client);
-                //       // await findOneListingByName(client, "Physics")
-                //       await updateListingbyStatus(client, $("#textbook").val(), {taken: true})
-                //
-                //   } catch (e) {
-                //     console.error(e);
-                //   } finally {
-                //     await client.close();
-                //   }
-                //
-                // }
-                //
-                // async function updateListingbyStatus(client, nameOfListing, updated_status){
-                //   const result = await client.db("CS20Final").collection("books").updateOne({ name : nameOfListing} , {$set: updated_status});
-                //
-                //   if(result){
-                //     console.log("worked")
-                //     console.log(result);
-                //   } else {
-                //     console.log("not found");
-                //   }
-                // }
-                //
-                // main().catch(console.error);
-
         </script>
     </body>
 </html>
