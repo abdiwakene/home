@@ -18,7 +18,6 @@ body {
     margin: 35px;
 }
 main {
-    background-color: #f9f9f9;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
